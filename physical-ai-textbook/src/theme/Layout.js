@@ -1,0 +1,71 @@
+import React, { useEffect } from 'react';
+import OriginalLayout from '@theme-original/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
+
+export default function Layout(props) {
+  const { siteConfig } = useDocusaurusContext();
+  
+  // Apply cyberpunk styling to all pages except the cyberpunk landing itself
+  useEffect(() => {
+    const isCyberpunkPage = window.location.pathname.includes('/cyberpunk-landing');
+    
+    if (!isCyberpunkPage) {
+      document.body.classList.add('docusaurus-cyberpunk');
+      
+      // Add cyberpunk elements to the page
+      const cyberpunkElements = document.createElement('div');
+      cyberpunkElements.className = 'cyberpunk-overlay';
+      cyberpunkElements.innerHTML = `
+        <div class="background-container">
+          <div class="futuristic-office"></div>
+          <div class="glass-panels"></div>
+          <div class="floating-code">
+            <span class="code-snippet">&lt;html&gt;</span>
+            <span class="code-snippet">function() {</span>
+            <span class="code-snippet">.class {</span>
+            <span class="code-snippet">var x = 5;</span>
+            <span class="code-snippet">return x;</span>
+            <span class="code-snippet">}&lt;/script&gt;</span>
+          </div>
+          <div class="particles"></div>
+        </div>
+        
+        <svg class="wire-system" id="wireSystem" width="100%" height="100%"></svg>
+        
+        <div class="chatbot-orb" id="chatbotOrb">
+          <div class="orb-glow"></div>
+          <div class="orb-content">AI</div>
+          <div class="tooltip">Ask anything from this book</div>
+        </div>
+      `;
+      
+      document.body.appendChild(cyberpunkElements);
+      
+      // Load cyberpunk functionality
+      const script = document.createElement('script');
+      script.src = './cyberpunk_textbook.js';
+      script.async = true;
+      document.head.appendChild(script);
+      
+      // Cleanup on unmount
+      return () => {
+        document.body.classList.remove('docusaurus-cyberpunk');
+        const existingCyberpunk = document.querySelector('.cyberpunk-overlay');
+        if (existingCyberpunk) {
+          document.body.removeChild(existingCyberpunk);
+        }
+        document.head.removeChild(script);
+      };
+    }
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <link rel="stylesheet" href="./cyberpunk_textbook.css" />
+      </Head>
+      <OriginalLayout {...props} />
+    </>
+  );
+}

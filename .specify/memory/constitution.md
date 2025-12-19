@@ -1,55 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+SYNC IMPACT REPORT
+Version change: N/A → 1.0.0
+List of modified principles: N/A (new constitution)
+Added sections: All principles and sections for Physical AI & Humanoid Robotics textbook
+Removed sections: N/A
+Templates requiring updates: ⚠ pending (no changes needed for this new constitution) 
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics – Panaversity Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Expert-Level Content
+All content must be technically accurate and suitable for advanced students; All code examples must be complete, tested and production-ready; Complex concepts must be broken down into digestible, sequential learning modules
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Hands-On Implementation
+Every concept must include practical examples and implementation exercises; Students must be able to build working prototypes following textbook instructions; Simulation tools (Gazebo/Unity, ROS 2) must be integrated into learning path
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Multi-Modal Integration
+Vision-Language-Action systems must be central to all examples; Integration of perception, reasoning, and actuation must be demonstrated; NVIDIA Isaac and simulation environments must be core learning tools
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. RAG-Powered Learning
+Textbook includes integrated RAG chatbot for answering questions; Qdrant Cloud for vector storage, Neon for metadata; OpenAI agents provide contextual explanations based on selected content
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Modern Development Practices
+Docusaurus v3 with TypeScript, FastAPI for backend services; GitHub Actions for CI/CD deployment to GitHub Pages; All modern tools and frameworks must be utilized
 
-### [PRINCIPLE_6_NAME]
+### VI. Accessibility & Localization
+Textbook content must be accessible to diverse learners; Urdu translation capability must be included; User authentication and personalized learning paths required
 
+## Technical Requirements
 
-[PRINCIPLE__DESCRIPTION]
+Hardware requirements for humanoid robotics simulation; Required software stack (ROS 2, Gazebo, Unity, NVIDIA Isaac); Development environment setup guidelines
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Content creation follows Docusaurus standards; Code examples must be tested before integration; Documentation must include deployment instructions
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+All content must align with educational objectives; Changes to core curriculum require review by subject matter experts; All code examples must pass testing before integration
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09

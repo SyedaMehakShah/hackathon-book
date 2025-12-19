@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk AI Textbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jetbrains-mono" rel="stylesheet">
+    <link rel="stylesheet" href="cyberpunk_textbook.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-container">
+        <div class="futuristic-office"></div>
+        <div class="glass-panels"></div>
+        <div class="floating-code">
+            <span class="code-snippet">&lt;html&gt;</span>
+            <span class="code-snippet">function() {</span>
+            <span class="code-snippet">.class {</span>
+            <span class="code-snippet">var x = 5;</span>
+            <span class="code-snippet">return x;</span>
+            <span class="code-snippet">}&lt;/script&gt;</span>
+        </div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Wire System Container -->
+    <svg class="wire-system" id="wireSystem" width="100%" height="100%"></svg>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+        <!-- Central Textbook -->
+        <div class="textbook-container" id="textbookContainer">
+            <div class="book" id="textbook">
+                <div class="book-cover">
+                    <div class="circuit-pattern"></div>
+                    <div class="ai-chip"></div>
+                    <h1 class="book-title">CYBER TEXTBOOK</h1>
+                    <p class="subtitle">AI-Powered Learning System</p>
+                </div>
+                <div class="book-pages">
+                    <div class="page"></div>
+                    <div class="page"></div>
+                </div>
+                <div class="book-spine"></div>
+            </div>
+        </div>
+
+        <!-- Glassmorphism Buttons -->
+        <div class="button-container" id="buttonContainer">
+            <button class="glass-button" id="readButton">
+                <span class="button-icon">📘</span>
+                <span class="button-text">Read Textbook</span>
+                <span class="micro-text">Access full content</span>
+            </button>
+
+            <button class="glass-button" id="chatButton">
+                <span class="button-icon">🤖</span>
+                <span class="button-text">Ask AI</span>
+                <span class="micro-text">AI-powered explanations</span>
+            </button>
+
+            <button class="glass-button" id="exploreButton">
+                <span class="button-icon">🧠</span>
+                <span class="button-text">Explore Concepts</span>
+                <span class="micro-text">Deep-dive into topics</span>
+            </button>
+
+            <button class="glass-button" id="labButton">
+                <span class="button-icon">⚙️</span>
+                <span class="button-text">Frontend Lab</span>
+                <span class="micro-text">Interactive examples</span>
+            </button>
+
+            <button class="glass-button" id="chaptersButton">
+                <span class="button-icon">📂</span>
+                <span class="button-text">View Chapters</span>
+                <span class="micro-text">Browse content</span>
+            </button>
+        </div>
+
+        <!-- Floating AI Chatbot Orb -->
+        <div class="chatbot-orb" id="chatbotOrb">
+            <div class="orb-glow"></div>
+            <div class="orb-content">AI</div>
+            <div class="tooltip">Ask anything from this book</div>
+        </div>
+
+        <!-- Cursor Effect -->
+        <div class="cursor-glow" id="cursorGlow"></div>
+    </div>
+
+    <!-- Chat Interface (Hidden by default) -->
+    <div class="chat-interface" id="chatInterface">
+        <div class="chat-header">
+            <h3>AI Assistant</h3>
+            <button class="close-chat" id="closeChat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+                Hello! I'm your AI assistant. Ask me anything about the textbook content.
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Ask a question about the textbook...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script src="cyberpunk_textbook.js"></script>
+</body>
+</html>

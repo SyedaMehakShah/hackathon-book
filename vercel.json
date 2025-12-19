@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd physical-ai-textbook && npm run build",
+  "outputDirectory": "physical-ai-textbook/build",
+  "framework": null,
+  "installCommand": "cd physical-ai-textbook && npm install"
+}
